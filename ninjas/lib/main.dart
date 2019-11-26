@@ -11,9 +11,57 @@ class Ninjacard extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Ninja ID Card'),
-
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Center(
+            child: CircleAvatar(
+              backgroundImage: AssetImage('assets/atari.jpeg'),
+              radius: 40.0,
+            ),
+          ),
+          Divider(
+            height: 90.0,
+            color: Colors.grey[800],
+          ),
+          Text(
+            'NAME',
+            style: TextStyle(
+              color: Colors.grey,
+              letterSpacing: 2.0,
+            ),
+
+          ),
+          SizedBox(height: 10.0,),
+          Text(
+            'Zack',
+            style: TextStyle(
+              color: Colors.red,
+              fontSize: 28.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            "LAST NAME",
+            style: TextStyle(
+              color: Colors.blue,
+
+            ),
+
+          ),
+          SizedBox(height:20.0),
+          Row(
+            children: <Widget>[
+              Icon(
+                Icons.email,
+                color: Colors.blue,
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
